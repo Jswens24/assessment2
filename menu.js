@@ -193,12 +193,12 @@ console.log(filteredFood);
 
 //CODE HERE
 
-const filterByProperty = (rating, number, type) => {
-    const filteredArr = [];
+const filterByProperty = (property, number, type) => {
+    let filteredArr;
     if (type === 'above') {
-        filteredArr.push(foodArr.filter(el => el.rating > number))
+        filteredArr = foodArr.filter(el => el[property] > number)
     } else if (type === 'below') {
-        filteredArr.push(foodArr.filter(el => el.rating < number))
+        filteredArr = foodArr.filter(el => el[property] < number)
     }
     return filteredArr
 }
